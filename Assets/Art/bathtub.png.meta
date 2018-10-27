@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: d8341b776744d4b40a8eb29ddff671ee
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bathtub_0
+    21300002: bathtub_1
+    21300004: bathtub_2
+    21300006: bathtub_3
+    21300008: bathtub_4
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bathtub_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 52
+        width: 451
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -225.5, y: 109.5}
+        - {x: -225.5, y: -180.5}
+        - {x: 188.5, y: -180.5}
+        - {x: 225.5, y: -102.5}
+        - {x: 225.5, y: 85.5}
+        - {x: 213.5, y: 109.5}
+      - - {x: -202.5, y: -9.5}
+        - {x: -202.5, y: 15.5}
+        - {x: -203.5, y: 16.5}
+        - {x: -203.5, y: 20.5}
+        - {x: -204.5, y: 19.5}
+        - {x: -202.5, y: 17.5}
+        - {x: -202.5, y: 12.5}
+        - {x: -200.5, y: -8.5}
+        - {x: -199.5, y: -11.5}
+        - {x: -199.5, y: -12.5}
+        - {x: -198.5, y: -12.5}
+      - - {x: 210.5, y: 91.5}
+        - {x: 213.5, y: 92.5}
+        - {x: 213.5, y: 95.5}
+        - {x: 210.5, y: 96.5}
+        - {x: 208.5, y: 94.5}
+      - - {x: -149.5, y: 107.5}
+        - {x: -146.5, y: 108.5}
+        - {x: -146.5, y: 111.5}
+        - {x: -149.5, y: 112.5}
+        - {x: -151.5, y: 110.5}
+      - - {x: 152.5, y: 107.5}
+        - {x: 155.5, y: 108.5}
+        - {x: 155.5, y: 111.5}
+        - {x: 152.5, y: 112.5}
+        - {x: 150.5, y: 110.5}
+      - - {x: 146.5, y: 109.5}
+        - {x: 149.5, y: 110.5}
+        - {x: 149.5, y: 113.5}
+        - {x: 146.5, y: 114.5}
+        - {x: 144.5, y: 112.5}
+      - - {x: -132.5, y: 110.5}
+        - {x: -129.5, y: 111.5}
+        - {x: -129.5, y: 114.5}
+        - {x: -132.5, y: 115.5}
+        - {x: -134.5, y: 113.5}
+      - - {x: 133.5, y: 116.5}
+        - {x: 131.5, y: 114.5}
+        - {x: 132.5, y: 110.5}
+        - {x: 140.5, y: 110.5}
+        - {x: 140.5, y: 115.5}
+        - {x: 137.5, y: 116.5}
+      - - {x: 184.5, y: 114.5}
+        - {x: 187.5, y: 115.5}
+        - {x: 187.5, y: 118.5}
+        - {x: 184.5, y: 119.5}
+        - {x: 182.5, y: 117.5}
+      - - {x: -119.5, y: 142.5}
+        - {x: -128.5, y: 142.5}
+        - {x: -177.5, y: 122.5}
+        - {x: -177.5, y: 116.5}
+        - {x: -171.5, y: 116.5}
+        - {x: -168.5, y: 117.5}
+        - {x: -126.5, y: 132.5}
+        - {x: -118.5, y: 137.5}
+        - {x: -118.5, y: 140.5}
+      - - {x: 133.5, y: 141.5}
+        - {x: 125.5, y: 143.5}
+        - {x: 120.5, y: 143.5}
+        - {x: 120.5, y: 138.5}
+        - {x: 128.5, y: 131.5}
+        - {x: 176.5, y: 116.5}
+        - {x: 182.5, y: 116.5}
+        - {x: 182.5, y: 121.5}
+        - {x: 174.5, y: 128.5}
+      - - {x: -184.5, y: 117.5}
+        - {x: -181.5, y: 118.5}
+        - {x: -181.5, y: 121.5}
+        - {x: -184.5, y: 122.5}
+        - {x: -186.5, y: 120.5}
+      - - {x: -121.5, y: 121.5}
+        - {x: -120.5, y: 118.5}
+        - {x: -117.5, y: 118.5}
+        - {x: -112.5, y: 121.5}
+        - {x: -113.5, y: 124.5}
+        - {x: -116.5, y: 124.5}
+      - - {x: 117.5, y: 123.5}
+        - {x: 117.5, y: 121.5}
+        - {x: 119.5, y: 118.5}
+        - {x: 124.5, y: 118.5}
+        - {x: 126.5, y: 120.5}
+        - {x: 125.5, y: 123.5}
+        - {x: 119.5, y: 124.5}
+      - - {x: -38.5, y: 125.5}
+        - {x: -39.5, y: 123.5}
+        - {x: -38.5, y: 120.5}
+        - {x: -28.5, y: 119.5}
+        - {x: -17.5, y: 119.5}
+        - {x: -17.5, y: 125.5}
+      - - {x: 21.5, y: 125.5}
+        - {x: 20.5, y: 122.5}
+        - {x: 20.5, y: 119.5}
+        - {x: 41.5, y: 119.5}
+        - {x: 42.5, y: 122.5}
+        - {x: 41.5, y: 125.5}
+      - - {x: 213.5, y: 119.5}
+        - {x: 216.5, y: 120.5}
+        - {x: 216.5, y: 122.5}
+        - {x: 210.5, y: 132.5}
+        - {x: 207.5, y: 132.5}
+        - {x: 206.5, y: 129.5}
+      - - {x: -210.5, y: 122.5}
+        - {x: -208.5, y: 120.5}
+        - {x: -205.5, y: 121.5}
+        - {x: -201.5, y: 130.5}
+        - {x: -203.5, y: 132.5}
+        - {x: -205.5, y: 132.5}
+        - {x: -210.5, y: 126.5}
+      - - {x: -48.5, y: 154.5}
+        - {x: -64.5, y: 153.5}
+        - {x: -66.5, y: 149.5}
+        - {x: -65.5, y: 146.5}
+        - {x: -47.5, y: 146.5}
+        - {x: -39.5, y: 150.5}
+        - {x: -39.5, y: 153.5}
+        - {x: -40.5, y: 154.5}
+      - - {x: 54.5, y: 154.5}
+        - {x: 44.5, y: 154.5}
+        - {x: 43.5, y: 152.5}
+        - {x: 44.5, y: 148.5}
+        - {x: 58.5, y: 146.5}
+        - {x: 71.5, y: 146.5}
+        - {x: 71.5, y: 151.5}
+        - {x: 69.5, y: 153.5}
+      - - {x: -220.5, y: 175.5}
+        - {x: -217.5, y: 176.5}
+        - {x: -217.5, y: 180.5}
+        - {x: -222.5, y: 180.5}
+        - {x: -222.5, y: 177.5}
+      - - {x: 222.5, y: 180.5}
+        - {x: 222.5, y: 177.5}
+        - {x: 224.5, y: 175.5}
+        - {x: 225.5, y: 175.5}
+        - {x: 225.5, y: 180.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9b4e19a984a1f4d9d57034be8492f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bathtub_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 381
+        width: 23
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca45c6fc8d43d84a8a941b8296b245d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bathtub_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 381
+        width: 24
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f39605376e45b49b1c8966a6d3bfaf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bathtub_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 359
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3c9449f22f4fb4c80d521d9c3003fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bathtub_4
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 359
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41615ff2ff8293408cc76a679e54009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2c154d908a39fe24abfdc68d5a0acaa7
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
