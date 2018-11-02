@@ -22,14 +22,14 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		score = 0;
-		UpdateScore();
 		StartCoroutine(Spawner());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		spawnWait = Random.Range(spawnMinWait, spawnMaxWait);
+
+
 	}
 
 	IEnumerator Spawner(){
@@ -44,16 +44,5 @@ public class GameController : MonoBehaviour {
 
 			yield return new WaitForSeconds(spawnWait);
 		}
-	}
-
-	/* Current Mechanic State: Score system
-	 * May change to a fill gauge, or back to health system */
-	public void AddScore(int addScore_){
-		score += addScore_;
-		UpdateScore();
-	}
-
-	void UpdateScore(){
-		scoreText.text = "S c o r e : " + score;
 	}
 }
