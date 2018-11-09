@@ -21,7 +21,7 @@ public class DogObject : MonoBehaviour  {
 	
 	// Update is called once per frame
 	void Update () {
-		currentWeapon = IsWeapon.weapon;
+		//currentWeapon = IsWeapon.weapon;
 		if(Input.GetKeyDown(KeyCode.Q)){
 			hygeine.CurrentValue -= 10;
 		}

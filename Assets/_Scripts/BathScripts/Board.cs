@@ -2,17 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameState{
+	wait,
+	move
+}
+
 public class Board : MonoBehaviour {
+	public GameState current = GameState.move;
 	public int width;
 	public int height;
+	public int offSet;
 	public GameObject tilePrefab;
-	private BackgroundTile[,] allTiles;
+	//private BackgroundTile[,] allTiles;
 	public GameObject[] tiles;
 	public GameObject[,] allTools;
 
+	private FindMatches findMatches;
+
 	// Use this for initialization
 	void Start () {
-		allTiles = new BackgroundTile[width, height];
+		findMatches = FindObjectOfType<FindMatches>();
+		//allTiles = new BackgroundTile[width, height];
 		allTools = new GameObject[width, height];
 		Setup();
 	}
@@ -21,10 +31,11 @@ public class Board : MonoBehaviour {
 	void Update () {
 		
 	}
+	
 	private void Setup(){
 		for(int i = 0; i < width; ++i){
 			for(int j = 0; j < height; ++j){
-				Vector2 tmpPos = new Vector2(i, j);
+				Vector2 tmpPos = new Vector2(i, j + offSet);
 				GameObject backgroundTile = Instantiate(tilePrefab, tmpPos, Quaternion.identity) as GameObject;
 				backgroundTile.transform.parent = this.transform;
 				backgroundTile.name = "( " + i + ", " + j + " )";
@@ -38,6 +49,8 @@ public class Board : MonoBehaviour {
 				maxIt = 0;
 
 				GameObject tool = Instantiate(tiles[whichTile], tmpPos, Quaternion.identity);
+				tool.GetComponent<Tile>().row = j;
+				tool.GetComponent<Tile>().column = i;
 				tool.transform.parent = this.transform;
 				tool.name = "( " + i + ", " + j + " )";
 				allTools[i, j] = tool;
@@ -72,6 +85,7 @@ public class Board : MonoBehaviour {
 
 	private void DestroyMatchesAt(int column, int row){
 		if(allTools[column, row].GetComponent<Tile>().isMatch){
+			findMatches.currentMatches.Remove(allTools[column, row]);
 			Destroy(allTools[column, row]);
 			allTools[column, row] = null;
 		}
@@ -112,10 +126,16 @@ public class Board : MonoBehaviour {
 		for(int i = 0; i < width; ++i){
 			for(int j = 0; j < height; ++j){
 				if(allTools[i, j] == null){
-					Vector2 tempPos = new Vector2(i, j);
+					Vector2 tempPos = new Vector2(i, j + offSet);
 					int use = Random.Range(0, tiles.Length);
 					GameObject piece = Instantiate(tiles[use], tempPos, Quaternion.identity);
+
+					piece.transform.parent = this.transform;
+					piece.name = "( " + i + ", " + j + " )";
+					
 					allTools[i, j] = piece;
+					piece.GetComponent<Tile>().row = j;
+					piece.GetComponent<Tile>().column = i;
 				}
 			}
 		}
@@ -142,5 +162,8 @@ public class Board : MonoBehaviour {
 			yield return new WaitForSeconds(.5f);
 			DestroyMatches();
 		}
+
+		yield return new WaitForSeconds(.5f);
+		current = GameState.move;
 	}
 }

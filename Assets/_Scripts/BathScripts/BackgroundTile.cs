@@ -16,7 +16,5 @@ public class BackgroundTile : MonoBehaviour {
 
 	void Initialize(){
 
-
-		
 	}
 }

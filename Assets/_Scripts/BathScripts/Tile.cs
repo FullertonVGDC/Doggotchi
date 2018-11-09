@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour {
 	private Vector2 tmpPos_;
 	private GameObject otherTile;
 	private Board board;
+	private FindMatches findMatches;
 
 	public bool isMatch = false;
 	public float swipeAngle_ = 0;
@@ -23,17 +24,19 @@ public class Tile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		board = FindObjectOfType<Board>();
-		targetX = (int)transform.position.x;
-		targetY = (int)transform.position.y;
-		row = targetY;
-		column = targetX;
-		prevRow = row;
-		prevColumn = column;
+		findMatches = FindObjectOfType<FindMatches>();
+		//targetX = (int)transform.position.x;
+		//targetY = (int)transform.position.y;
+		//row = targetY;
+		//column = targetX;
+		//prevRow = row;
+		//prevColumn = column;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		FindMatches();
+		//FindMatches();
+
 		if(isMatch){
 			SpriteRenderer mySprite = GetComponent<SpriteRenderer>();
 			mySprite.color = new Color(0f, 0f, 0f, .2f);
@@ -49,6 +52,7 @@ public class Tile : MonoBehaviour {
 			if(board.allTools[column, row] != this.gameObject){
 				board.allTools[column, row] = this.gameObject;
 			}
+			findMatches.FindAllMatches();
 		}
 		else {
 			// Set position
@@ -64,6 +68,8 @@ public class Tile : MonoBehaviour {
 			if(board.allTools[column, row] != this.gameObject){
 				board.allTools[column, row] = this.gameObject;
 			}
+			findMatches.FindAllMatches();
+
 		}
 		else {
 			// Set position
@@ -80,6 +86,9 @@ public class Tile : MonoBehaviour {
 				otherTile.GetComponent<Tile>().column = column;
 				row = prevRow;
 				column = prevColumn;
+
+				yield return new WaitForSeconds(.5f);
+				board.current = GameState.move;
 			}
 			else{
 				board.DestroyMatches();
@@ -90,18 +99,26 @@ public class Tile : MonoBehaviour {
 	}
 
 	private void OnMouseDown(){
-		firstTouchPos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		if(board.current == GameState.move){
+			firstTouchPos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		}
 	}
 
 	private void OnMouseUp(){
-		finalTouchPos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		CalculateAngle();
+		if(board.current == GameState.move){
+			finalTouchPos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			CalculateAngle();
+		}
 	}
 
 	void CalculateAngle(){
 		if(Mathf.Abs(finalTouchPos_.y - firstTouchPos_.y) > swipeResist || Mathf.Abs(finalTouchPos_.x - firstTouchPos_.x) > swipeResist){
 			swipeAngle_ = Mathf.Atan2(finalTouchPos_.y - firstTouchPos_.y, finalTouchPos_.x - firstTouchPos_.x) * 180 / Mathf.PI;
 			MovePieces();
+			board.current = GameState.wait;
+		}
+		else {
+			board.current = GameState.move;
 		}
 	}
 
@@ -109,24 +126,32 @@ public class Tile : MonoBehaviour {
 		// Swap right
 		if(swipeAngle_ > -45 && swipeAngle_ <= 45 && column < board.width - 1){
 			otherTile = board.allTools[column + 1, row];
+			prevRow = row;
+			prevColumn = column;
 			otherTile.GetComponent<Tile>().column -= 1;
 			column += 1;
 		}
 		// Swap Up
 		else if(swipeAngle_ > 45 && swipeAngle_ <= 135 && row < board.height - 1){
 			otherTile = board.allTools[column, row + 1];
+			prevRow = row;
+			prevColumn = column;
 			otherTile.GetComponent<Tile>().row -= 1;
 			row += 1;
 		}
 		// Swap Left
 		else if((swipeAngle_ > 135 || swipeAngle_ <= -135) && column > 0){
 			otherTile = board.allTools[column - 1, row];
+			prevRow = row;
+			prevColumn = column;
 			otherTile.GetComponent<Tile>().column += 1;
 			column -= 1;
 		}
 		// Swap Down
 		else if(swipeAngle_ < -45 && swipeAngle_ >= -135 && row > 0){
 			otherTile = board.allTools[column, row - 1];
+			prevRow = row;
+			prevColumn = column;
 			otherTile.GetComponent<Tile>().row += 1;
 			row -= 1;
 		}
@@ -134,6 +159,7 @@ public class Tile : MonoBehaviour {
 		StartCoroutine(CheckMoveCo());
 	}
 
+/*
 	void FindMatches(){
 		if(column > 0 && column < board.width - 1){
 			GameObject leftTile1 = board.allTools[column - 1, row];
@@ -159,4 +185,5 @@ public class Tile : MonoBehaviour {
 			}
 		}
 	}
+	 */
 }
