@@ -93,6 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
+  jumpForce: 31
+  isGrounded: 0
+  boneCount: 0
 --- !u!212 &212543351473281038
 SpriteRenderer:
   m_ObjectHideFlags: 1
