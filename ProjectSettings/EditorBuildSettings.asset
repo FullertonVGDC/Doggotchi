@@ -6,21 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/MainScene.unity
+    path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/_Scenes/HomeScene.unity
-    guid: 3555dc6a3a99f8240883c04f7e594d83
-  - enabled: 1
-    path: Assets/_Scenes/BathMinigame.unity
-    guid: c2cc70780bdfd9746b3eada9f5655446
-  - enabled: 1
-    path: Assets/_Scenes/FeedMinigame.unity
-    guid: 192fe6136b5aa5f46a9bed10e7d6f07a
-  - enabled: 1
-    path: Assets/_Scenes/PlayMinigame.unity
-    guid: 9fd3c7f835872cb4bba1d3f5bfc81837
-  - enabled: 1
-    path: Assets/_Scenes/WalkMinigame.unity
-    guid: 01099d8e9354bef43b4da41296239f7b
   m_configObjects: {}
