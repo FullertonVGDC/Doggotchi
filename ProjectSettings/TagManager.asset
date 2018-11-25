@@ -6,6 +6,20 @@ TagManager:
   tags:
   - Ground
   - Bone
+  tags:
+  - doge
+  - brush
+  - shampoo
+  - pooSpawn
+  - enemy
+  - bad sponge
+  - bathtub
+  - bone sponge
+  - dirt
+  - happy face
+  - regular sponge
+  - towel
+  - water drop
   layers:
   - Default
   - TransparentFX
@@ -16,6 +30,7 @@ TagManager:
   - 
   - 
   - Enemy
+  - Player
   - 
   - 
   - 
@@ -40,6 +55,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1647864215
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2478781489
+    locked: 0
+  - name: Top
+    uniqueID: 1523659499
     locked: 0
