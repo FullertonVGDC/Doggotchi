@@ -61,6 +61,7 @@
      <Compile Include="Assets\_Scripts\Bath\StatSystem.cs" />
      <Compile Include="Assets\_Scripts\Bath\Tile.cs" />
      <Compile Include="Assets\_Scripts\ButtonBehavior.cs" />
+     <Compile Include="Assets\_Scripts\HealthScript.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
      <Compile Include="Assets\_Scripts\Walking\BoneScore.cs" />
      <Compile Include="Assets\_Scripts\Walking\CameraFollow.cs" />
