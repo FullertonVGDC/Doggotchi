@@ -5,10 +5,17 @@ using UnityEngine.UI;
 
 public class StatsScript : MonoBehaviour
 {
+   
     public Image HealthBar;
 	public Image HappyBar;
 	public Image HygieneBar;
 	public Image HungerBar;
+
+    public Image StarCounter;
+    public Sprite ThreeStar;
+    public Sprite TwoStar;
+    public Sprite OneStar;
+    public Sprite NoStar;
 
 
     public float max_health = 100f;
@@ -162,14 +169,16 @@ public class StatsScript : MonoBehaviour
 	void ChangeDogo()
 	{
 		if (heartcount == 15f) {
-			//CHANGE FACE
+            StarCounter.sprite = ThreeStar;
 		} else if (heartcount >= 10f && heartcount <= 14f) {
-			//CHAGE FACE
-		} else if (heartcount >= 5f && heartcount <= 9f) {// CHANGE FACE
-		}
+            StarCounter.sprite = TwoStar;
+        } else if (heartcount >= 5f && heartcount <= 9f)
+        {
+            StarCounter.sprite = OneStar;
+        }
 		else
-		{ 
-			//Regular Face
+		{
+            StarCounter.sprite = NoStar;
 		}
 			
 	}
