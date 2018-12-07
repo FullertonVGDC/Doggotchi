@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Introduction.unity
+- path: Assets/Fungus Flowcharts.unity
   isLoaded: 1
   isActive: 1
