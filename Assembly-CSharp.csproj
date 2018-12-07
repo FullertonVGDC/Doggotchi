@@ -76,9 +76,17 @@
      <Compile Include="Assets\_Scripts\Walking\GameOver.cs" />
      <Compile Include="Assets\_Scripts\Walking\TimerText.cs" />
      <Compile Include="Assets\_Scripts\Walking\TimerWarning.cs" />
+     <Compile Include="Assets\bone.cs" />
+     <Compile Include="Assets\boneSpawn.cs" />
+     <Compile Include="Assets\cloud.cs" />
+     <Compile Include="Assets\cloudspawn.cs" />
      <Compile Include="Assets\dogcontroller.cs" />
+     <Compile Include="Assets\frisbee.cs" />
+     <Compile Include="Assets\FrisbeeSpawner.cs" />
      <Compile Include="Assets\playercontroller.cs" />
      <Compile Include="Assets\RepeatingBackground.cs" />
+     <Compile Include="Assets\squirrel.cs" />
+     <Compile Include="Assets\SquirrelSpawner.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/casey/Documents/Unity Projects/Doggotchi/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
