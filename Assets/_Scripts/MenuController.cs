@@ -38,7 +38,7 @@ public class MenuController : MonoBehaviour {
                 SceneManager.LoadScene("PlayMinigame");
                 break;
             case 6:
-                SceneManager.LoadScene("FeedMinigame");
+                SceneManager.LoadScene("FoodMinigame");
                 break;
             default:
                 break;
