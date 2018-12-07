@@ -355,6 +355,11 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0.07168723
       objectReference: {fileID: 0}
+    - target: {fileID: 114219943671544922, guid: cec8b228db6913b4ba7bdc935f591650,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec8b228db6913b4ba7bdc935f591650, type: 2}
   m_IsPrefabAsset: 0

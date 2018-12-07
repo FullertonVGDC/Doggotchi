@@ -77,6 +77,8 @@
      <Compile Include="Assets\_Scripts\Walking\TimerText.cs" />
      <Compile Include="Assets\_Scripts\Walking\TimerWarning.cs" />
      <Compile Include="Assets\dogcontroller.cs" />
+     <Compile Include="Assets\playercontroller.cs" />
+     <Compile Include="Assets\RepeatingBackground.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/casey/Documents/Unity Projects/Doggotchi/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

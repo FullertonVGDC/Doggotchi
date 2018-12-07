@@ -32,13 +32,19 @@ public class MenuController : MonoBehaviour {
                 SceneManager.LoadScene("BathMinigame");
                 break;
             case 4:
-                SceneManager.LoadScene("WalkMiniGame");
+                SceneManager.LoadScene("walk");
                 break;
             case 5:
                 SceneManager.LoadScene("PlayMinigame");
                 break;
             case 6:
                 SceneManager.LoadScene("FeedMinigame");
+                break;
+            case 7:
+                SceneManager.LoadScene("credits");
+                break;
+            case 8:
+                SceneManager.LoadScene("howtoplay");
                 break;
             default:
                 break;
