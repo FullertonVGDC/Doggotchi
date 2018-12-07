@@ -783,6 +783,10 @@ Prefab:
       propertyPath: m_Name
       value: dog_runside
       objectReference: {fileID: 0}
+    - target: {fileID: 1163356902622434, guid: b2c2b377b7bd7c5408b9b89e7806cae8, type: 2}
+      propertyPath: m_TagString
+      value: Dog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c2b377b7bd7c5408b9b89e7806cae8, type: 2}
   m_IsPrefabAsset: 0
