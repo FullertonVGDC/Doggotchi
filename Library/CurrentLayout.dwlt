@@ -397,9 +397,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.3087707, y: 0.13292898, z: 69.94141}
+    m_Target: {x: 0.79746044, y: 0.5960724, z: 80.09163}
     speed: 2
-    m_Value: {x: 2.3087707, y: 0.13292898, z: 69.94141}
+    m_Value: {x: 0.79746044, y: 0.5960724, z: 80.09163}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -431,9 +431,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.929067
+    m_Target: 13.025579
     speed: 2
-    m_Value: 10.929067
+    m_Value: 13.025579
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -628,10 +628,10 @@ MonoBehaviour:
     height: 422
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 219}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: e6fbffff00000000
+    m_ExpandedIDs: f4f0fdff7a08feff3447feff6448feff424bfeff8a4efeffee4ffeff0651feff4452fefff053feff1856feffae57fefff658feff80a4feff046afffffeb1ffff64b4ffffceb5ffffc0b9ffffeec2ffff9ec4ffff10c6ffff16caffff4acbffffbed2ffff3ed4ffff34d7ffffe0d9ffffc2e5ffff000000000c5c00004c740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -649,8 +649,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
-  m_ExpandedScenes:
-  - TarasTestScene
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -717,20 +716,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art
+    - Assets/Audio
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art
+  - Assets/Audio
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Tara\Documents\Unity Projects\Doggotchi
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 158}
-    m_SelectedIDs: 1c0f0000
-    m_LastClickedID: 3868
-    m_ExpandedIDs: 0000000070090000f8090000b80a0000900c00001c0f00007e1200003c1300003437000000ca9a3b
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 4e4d0000
+    m_LastClickedID: 19790
+    m_ExpandedIDs: 00000000084c0000324c0000744c0000ea4c0000984d0000784e0000a84e00001a50000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,7 +757,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 8adcf3ff
     m_LastClickedID: -795510
-    m_ExpandedIDs: 0000000070090000f8090000b80a0000900c00001c0f00007e1200003c13000034370000
+    m_ExpandedIDs: 00000000084c0000324c0000744c0000ea4c0000984d0000784e0000a84e00001a500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
