@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Ground
+  - Bone
+  tags:
   - doge
   - brush
   - shampoo
@@ -26,6 +29,7 @@ TagManager:
   - UI
   - 
   - 
+  - Enemy
   - Player
   - 
   - 

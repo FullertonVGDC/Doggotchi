@@ -155,12 +155,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df6a05d6194a6a644873a5ea21b7a779, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &57657649 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114212197312468496, guid: df6a05d6194a6a644873a5ea21b7a779,
-    type: 2}
-  m_PrefabInternal: {fileID: 57657648}
-  m_Script: {fileID: 11500000, guid: 5985cfda283aa3c48920211e512df71b, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +232,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &827666395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114620832403538374, guid: df6a05d6194a6a644873a5ea21b7a779,
+    type: 2}
+  m_PrefabInternal: {fileID: 57657648}
+  m_Script: {fileID: 11500000, guid: 5985cfda283aa3c48920211e512df71b, type: 3}
 --- !u!1 &908230214
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 57657649}
+      - m_Target: {fileID: 827666395}
         m_MethodName: MenuButton
         m_Mode: 3
         m_Arguments:
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 57657649}
+      - m_Target: {fileID: 827666395}
         m_MethodName: MenuButton
         m_Mode: 3
         m_Arguments:
@@ -687,7 +687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.75077677}
   m_AnchorMax: {x: 0.5, y: 0.75077677}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 343, y: 122.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042997002
