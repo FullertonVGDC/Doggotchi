@@ -4,7 +4,10 @@ using UnityEngine;
 
 public enum GameState{
 	wait,
-	move
+	move,
+	win,
+	lose,
+	pause
 }
 
 public class Board : MonoBehaviour {
@@ -13,18 +16,31 @@ public class Board : MonoBehaviour {
 	public int height;
 	public int offSet;
 	public GameObject tilePrefab;
-	//private BackgroundTile[,] allTiles;
 	public GameObject[] tiles;
 	public GameObject[,] allTools;
+	public Tile currentTile;
+	public int baseValue = 20;
 
 	private FindMatches findMatches;
+	private bool noMoreMatches;
+	private ScoreManager scoreManager;
+	private int streakValue = 1;
+	private GoalManager goalManager;
+	private SoundManager soundManager;
+	private DogPlayer dog;
+
 
 	// Use this for initialization
 	void Start () {
+		dog = FindObjectOfType<DogPlayer>();
+		soundManager = FindObjectOfType<SoundManager>();
+		goalManager = FindObjectOfType<GoalManager>();
+		scoreManager = FindObjectOfType<ScoreManager>();
 		findMatches = FindObjectOfType<FindMatches>();
-		//allTiles = new BackgroundTile[width, height];
 		allTools = new GameObject[width, height];
 		Setup();
+
+		current = GameState.pause;
 	}
 	
 	// Update is called once per frame
@@ -83,10 +99,59 @@ public class Board : MonoBehaviour {
 		return false;
 	}
 
+
+	private void CheckMakeBombs(){
+		if(findMatches.currentMatches.Count >= 4 || findMatches.currentMatches.Count <= 8){
+			// make a type bomb
+				if(currentTile != null){
+					if(currentTile.isMatch){
+						if(!currentTile.isTypeBomb){
+							currentTile.isMatch = false;
+							currentTile.MakeTypeBomb();
+							if(soundManager != null){
+								soundManager.Bark();
+							}
+						}
+
+					}
+					else{
+						if(currentTile.otherTile != null){
+							Tile other = currentTile.otherTile.GetComponent<Tile>();
+							if(other.isMatch){
+								if(!other.isTypeBomb){
+									other.isMatch = false;
+									other.MakeTypeBomb();
+								}
+							}
+						}
+					}
+				}
+		}
+	}
+
 	private void DestroyMatchesAt(int column, int row){
 		if(allTools[column, row].GetComponent<Tile>().isMatch){
+			if(findMatches.currentMatches.Count >= 4){
+				CheckMakeBombs();
+			}
+
+			if(goalManager != null){
+				goalManager.CompareGoal(allTools[column, row].tag.ToString());
+				goalManager.UpdateGoals();
+			}
 			findMatches.currentMatches.Remove(allTools[column, row]);
+
+			if(soundManager != null){
+				soundManager.PlayNoise();
+			}
+
 			Destroy(allTools[column, row]);
+			scoreManager.IncreaseScore(baseValue * streakValue);
+
+			if(dog != null){
+				dog.UpdateHygiene(streakValue);
+			}
+
 			allTools[column, row] = null;
 		}
 	}
@@ -159,11 +224,124 @@ public class Board : MonoBehaviour {
 		yield return new WaitForSeconds(.5f);
 
 		while(MatchesOnBoard()){
+			streakValue += 1;
 			yield return new WaitForSeconds(.5f);
 			DestroyMatches();
 		}
 
+		findMatches.currentMatches.Clear();
+		currentTile = null;
 		yield return new WaitForSeconds(.5f);
+
+		if(DeadLocked()){
+			ShuffleBoard();
+		}
+
 		current = GameState.move;
+		streakValue = 1;
 	}
+
+	private void SwitchPieces(int column, int row, Vector2 direction){ // Reeses peices? Reeces?
+		GameObject temp = allTools[column + (int)direction.x, row + (int)direction.y] as GameObject;
+		allTools[column + (int)direction.x, row + (int)direction.y] = allTools[column, row];
+		allTools[column, row] = temp;
+	}
+
+	private bool CheckForMatches(){
+		for(int i = 0; i < width; ++i){
+			for(int j = 0; j < height; ++j){
+				if(allTools[i, j] != null){
+						if(i < width - 2){
+						if(allTools[i + 1, j] != null && allTools[i + 2, j] != null){
+							if(allTools[i + 1, j].tag == allTools[i, j].tag && allTools[i + 2, j].tag == allTools[i, j].tag){
+								return true;
+							}
+						}
+					}
+					if(j < height - 2){
+						if(allTools[i, j + 1] != null && allTools[i, j + 2] != null){
+							if(allTools[i, j + 1].tag == allTools[i, j].tag && allTools[i, j + 2].tag == allTools[i, j].tag){
+								return true;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return false;
+	}
+
+	private bool SwitchAndCheck(int column, int row, Vector2 direction){
+		SwitchPieces(column, row, direction);
+
+		if(CheckForMatches()){
+			SwitchPieces(column, row, direction);
+			return true;
+		}
+
+		SwitchPieces(column, row, direction);
+		return false;
+	}
+
+	private bool DeadLocked(){
+		for(int i = 0; i < width; ++i){
+			for(int j = 0; j < height; ++j){
+				if(allTools[i, j] != null){
+					if(i < width - 2){
+						if(SwitchAndCheck(i, j, Vector2.right)){
+							return false;
+						}
+					}
+
+					if(j < height - 2){
+						if(SwitchAndCheck(i, j, Vector2.up)){
+							return false;
+						}
+					}
+				}
+			}
+		}
+
+		return true;
+	}
+
+	private void ShuffleBoard(){
+		List<GameObject> reshuffle = new List<GameObject>();
+		
+		for(int i = 0; i < width; ++i){
+			for(int j = 0; j < height; ++j){
+				if(allTools[i, j] != null){
+					reshuffle.Add(allTools[i, j]);
+				}
+			}
+		}
+
+		for(int i = 0; i < width; ++i){
+			for(int j = 0; j < height; ++j){
+				int use = Random.Range(0, reshuffle.Count);
+				
+
+				int maxIt = 0;
+				while(MatchesAt(i, j, reshuffle[use]) && maxIt < 100){
+					use = Random.Range(0, reshuffle.Count);
+					++maxIt;
+				}
+				Tile pieces = reshuffle[use].GetComponent<Tile>();
+				maxIt = 0;
+
+				pieces.column = i;
+				pieces.row = j;
+
+				allTools[i, j] = reshuffle[use];
+				reshuffle.Remove(reshuffle[use]);
+			}
+		}
+		
+		if(DeadLocked()){
+			ShuffleBoard();
+		}
+	}
+
+	
 }

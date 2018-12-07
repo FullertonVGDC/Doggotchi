@@ -1,20 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class FindMatches : MonoBehaviour {
 	private Board board;
 	public List<GameObject> currentMatches = new List<GameObject>();
+	public List<int> totalMatches = new List<int>();
+//	public const float baseMultiplier = 0.2f;
 
-	// Use this for initialization
+	/* @var board -- will find the only board object instance
+	 * in the scene. */
 	void Start () {
 		board = FindObjectOfType<Board>();
 	}
-
+	
 	public void FindAllMatches(){
 		StartCoroutine(FindAllMatchesCo());
 	}
-	
+
+	private void AddAndMatch(GameObject t){
+	if(!currentMatches.Contains(t)){
+		currentMatches.Add(t);
+	}
+		t.GetComponent<Tile>().isMatch = true;
+	}
+
+	private void GetNearbyPiees(GameObject t1, GameObject t2, GameObject t3){
+		AddAndMatch(t1);
+		AddAndMatch(t2);
+		AddAndMatch(t3);
+	}
+
+	/* @function FindAllMatches */
 	private IEnumerator FindAllMatchesCo(){
 		yield return new WaitForSeconds(.2f);
 		for(int i = 0; i < board.width; ++i){
@@ -35,22 +53,7 @@ public class FindMatches : MonoBehaviour {
 							/* Check the tags on right and left tiles to see if match with the 
 							 * current tile. If matched, then set @variable isMatch to true */
 							if(leftTile.tag == currentTile.tag && rightTile.tag == currentTile.tag){
-								if(!currentMatches.Contains(leftTile)){
-									currentMatches.Add(leftTile);
-								}
-								
-								leftTile.GetComponent<Tile>().isMatch = true;
-
-								if(!currentMatches.Contains(rightTile)){
-									currentMatches.Add(rightTile);
-								}
-								rightTile.GetComponent<Tile>().isMatch = true;
-
-								if(!currentMatches.Contains(currentTile)){
-									currentMatches.Add(currentTile);
-								}
-
-								currentTile.GetComponent<Tile>().isMatch = true;
+								GetNearbyPiees(leftTile, currentTile, rightTile);
 							}
 						}
 					}
@@ -69,24 +72,21 @@ public class FindMatches : MonoBehaviour {
 							/* Check the tags of the tiles below and above to see if matching with
 							 * the current tiles tag. TRUE then set @variable isMatch to true */
 							if(downTile.tag == currentTile.tag && upTile.tag == currentTile.tag){
-								if(!currentMatches.Contains(downTile)){
-									currentMatches.Add(downTile);
-								}
-
-								downTile.GetComponent<Tile>().isMatch = true;
-
-								if(!currentMatches.Contains(upTile)){
-									currentMatches.Add(upTile);
-								}
-
-								upTile.GetComponent<Tile>().isMatch = true;
-
-								if(!currentMatches.Contains(currentTile)){
-									currentMatches.Add(currentTile);
-								}
-								currentTile.GetComponent<Tile>().isMatch = true;
+								GetNearbyPiees(upTile, currentTile, downTile);
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+
+	public void MatchesPiecesOfType(string type){
+		for(int i = 0; i < board.width; ++i){
+			for(int j = 0; j < board.height; ++j){
+				if(board.allTools[i, j] != null){
+					if(board.allTools[i, j].tag == type){
+						board.allTools[i, j].GetComponent<Tile>().isMatch = true;
 					}
 				}
 			}
