@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 581, y: 471}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 82
+  controlID: 15
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 581, y: 471}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 83
+  controlID: 16
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 471}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 84
+  controlID: 17
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 200}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 85
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.14616042, y: 0.47766638, z: 58.425488}
+    m_Target: {x: 2.3087707, y: 0.13292898, z: 69.94141}
     speed: 2
-    m_Value: {x: 0.14616042, y: 0.47766638, z: 58.425488}
+    m_Value: {x: 2.3087707, y: 0.13292898, z: 69.94141}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -431,9 +431,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.462985
+    m_Target: 10.929067
     speed: 2
-    m_Value: 9.462985
+    m_Value: 10.929067
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -477,7 +477,6 @@ MonoBehaviour:
     - {fileID: 1107231633050932894, guid: 61acabc0ccae3254c9955dad671d55e6, type: 2}
     - {fileID: 1107642424923281728, guid: b86a4f5c2e551c444ba046d2081d19dc, type: 2}
     - {fileID: 1107384660014969594, guid: f5c09cd32648cb64d95946a318ad3a81, type: 2}
-    - {fileID: 1107901560521334264, guid: a160da6f9d3ec424193d11bd4e04eba9, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.37958628
       e01: 0
@@ -559,22 +558,6 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -645,8 +628,8 @@ MonoBehaviour:
     height: 422
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 187}
-    m_SelectedIDs: e04b0000
+    scrollPos: {x: 0, y: 219}
+    m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
@@ -734,20 +717,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Dog
+    - Assets/Art
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/Dog
+  - Assets/Art
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Tara\Documents\Unity Projects\Doggotchi
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 118}
-    m_SelectedIDs: f8090000
-    m_LastClickedID: 2552
-    m_ExpandedIDs: 0000000070090000f80900008c0c0000020f000044120000fe120000a836000000ca9a3b
+    scrollPos: {x: 0, y: 158}
+    m_SelectedIDs: 1c0f0000
+    m_LastClickedID: 3868
+    m_ExpandedIDs: 0000000070090000f8090000b80a0000900c00001c0f00007e1200003c1300003437000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -775,7 +758,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 8adcf3ff
     m_LastClickedID: -795510
-    m_ExpandedIDs: 0000000070090000f80900008c0c0000020f000044120000fe120000a8360000
+    m_ExpandedIDs: 0000000070090000f8090000b80a0000900c00001c0f00007e1200003c13000034370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -802,7 +785,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 062b000082270000882700005a28000030280000f82a000092e5fdff722e0000102f00002e29000048270000000000009476000078550000a6290000ec280000722b0000fc27000058090000f43100000c300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -858,7 +841,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -162680
+  m_LastSelectedObjectID: -67990
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
