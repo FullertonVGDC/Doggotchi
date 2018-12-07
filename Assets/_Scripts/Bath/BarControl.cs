@@ -15,15 +15,9 @@ public class BarControl : MonoBehaviour {
 	public float MaxValue { get; set; }
 	public float Value{ 
 		set{ 
-			string[] tmp = valueText.text.Split(':');
-			valueText.text = tmp[0] + ": " + value + " / " + MaxValue;
+			valueText.text =  value + " / " + MaxValue;
 			fillAmount = Map(value, 0, MaxValue, 0, 1); 
 		}
-	}
-
-	// Use this for initialization
-	void Start () {
-		
 	}
 	
 	// Update is called once per frame
