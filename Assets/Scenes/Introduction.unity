@@ -1145,7 +1145,6 @@ GameObject:
   - component: {fileID: 614709744}
   - component: {fileID: 614709743}
   - component: {fileID: 614709730}
-  - component: {fileID: 614709725}
   m_Layer: 0
   m_Name: Introduction
   m_TagString: Untagged
@@ -1177,7 +1176,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 614709742}
   selectedCommands: []
   variables: []
   description: 
@@ -1239,26 +1239,6 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   targetCamera: {fileID: 0}
---- !u!114 &614709725
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614709721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 28
-  indentLevel: 0
-  targetFlowchart: {fileID: 2144855944}
-  targetBlock: {fileID: 2144855970}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
 --- !u!4 &614709726
 Transform:
   m_ObjectHideFlags: 0
@@ -1661,7 +1641,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 614709741}
-  - {fileID: 614709725}
 --- !u!114 &614709743
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1778,8 +1757,14 @@ GameObject:
   - component: {fileID: 724862878}
   - component: {fileID: 724862877}
   - component: {fileID: 724862876}
+  - component: {fileID: 724862881}
+  - component: {fileID: 724862886}
+  - component: {fileID: 724862885}
+  - component: {fileID: 724862884}
+  - component: {fileID: 724862883}
+  - component: {fileID: 724862882}
   m_Layer: 0
-  m_Name: Walking Minigame
+  m_Name: Walking Minigame/Rando Encounters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,11 +1783,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1, y: 0}
+  scrollPos: {x: 119.562325, y: -15.771917}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1810,7 +1795,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 724862874}
+  - {fileID: 724862856}
   selectedCommands: []
   variables: []
   description: 
@@ -1865,7 +1850,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 15
     y: 35
-    width: 126.8
+    width: 127.27272
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1982,7 +1967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: Your pup is tired... time to go home!
+  storyText: What a long day... time to go home!
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2010,7 +1995,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 166
     y: 36
-    width: 148.4
+    width: 147.2727
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2035,7 +2020,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 96
     y: 90
-    width: 146.8
+    width: 146.36362
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2086,7 +2071,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 664
     y: 113
-    width: 169.2
+    width: 169.0909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2297,7 +2282,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 403
     y: 33
-    width: 169.2
+    width: 169.0909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2374,9 +2359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 402
+    x: 399.64706
     y: 87
-    width: 169.2
+    width: 169.0909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2427,7 +2412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 23
   indentLevel: 0
-  storyText: 'Oh! '
+  storyText: 'Ah! '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2481,7 +2466,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 406
     y: 142
-    width: 169.2
+    width: 169.0909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2560,7 +2545,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 840
     y: 186
-    width: 202
+    width: 200.90907
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2636,7 +2621,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 908
     y: 99
-    width: 154
+    width: 153.63635
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2711,7 +2696,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 716
     y: 51
-    width: 169.2
+    width: 169.0909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2722,6 +2707,165 @@ MonoBehaviour:
   commandList:
   - {fileID: 724862879}
   - {fileID: 724862878}
+--- !u!114 &724862881
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724862844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 404.30115
+    y: 200.9991
+    width: 229.09088
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 34
+  blockName: Random Encounter  (bad stats)
+  description: Only play this if the dog has BAD stats
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 724862886}
+  - {fileID: 724862885}
+  - {fileID: 724862884}
+  - {fileID: 724862883}
+  - {fileID: 724862882}
+--- !u!114 &724862882
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724862844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 0
+  storyText: The mysterious young woman storms away.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &724862883
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724862844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  storyText: '"YOU need to take much better care of her!"'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &724862884
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724862844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  indentLevel: 0
+  storyText: '"Your poor pup looks AWFUL!"'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &724862885
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724862844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  storyText: '"Are you out of your mind?"'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &724862886
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724862844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  storyText: A young woman stops you in your tracks as you're walking your pup.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &852346926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2144855944}
+  selectedFlowchart: {fileID: 724862845}
 --- !u!4 &956905794
 Transform:
   m_ObjectHideFlags: 1
