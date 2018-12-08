@@ -8,6 +8,15 @@ TagManager:
   - Bone
   - Dog
   - enemy
+  - doge
+  - water drop
+  - dirt
+  - bathtub
+  - bad sponge
+  - towel
+  - regular sponge
+  - shampoo
+  - Music
   layers:
   - Default
   - TransparentFX

@@ -83,6 +83,7 @@
      <Compile Include="Assets\dogcontroller.cs" />
      <Compile Include="Assets\frisbee.cs" />
      <Compile Include="Assets\FrisbeeSpawner.cs" />
+     <Compile Include="Assets\MusicClass.cs" />
      <Compile Include="Assets\playercontroller.cs" />
      <Compile Include="Assets\RepeatingBackground.cs" />
      <Compile Include="Assets\squirrel.cs" />
