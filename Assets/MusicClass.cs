@@ -4,17 +4,23 @@ using System.Collections.Generic;
  
  public class MusicClass : MonoBehaviour
  {
+     public static MusicClass instance;
      private AudioSource _audioSource;
      private void Awake()
      {
-         DontDestroyOnLoad(this);
-         _audioSource = GetComponent<AudioSource>();
-
-         if (FindObjectsOfType(GetType()).Length > 1)
+         if (instance == null)
          {
-             Destroy(gameObject);
+            DontDestroyOnLoad(this);
+            instance = this;
          }
-     }
+
+        else if (instance != this)
+        {
+             Destroy(gameObject);
+        }
+
+        _audioSource = GetComponent<AudioSource>();
+    }
  
      public void PlayMusic()
      {
