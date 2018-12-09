@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114080968765976118}
   m_Layer: 8
   m_Name: bacon
-  m_TagString: bad sponge
+  m_TagString: bacon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

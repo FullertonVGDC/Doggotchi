@@ -51,7 +51,7 @@ public class GoalManager : MonoBehaviour {
 			if(endGame != null){
 				endGame.WinGame();
 			}
-			Debug.Log("You win!");
+		//	Debug.Log("You win!");
 		}
 	}
 

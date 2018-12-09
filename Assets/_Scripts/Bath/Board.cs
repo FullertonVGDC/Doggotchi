@@ -40,7 +40,7 @@ public class Board : MonoBehaviour {
 		allTools = new GameObject[width, height];
 		Setup();
 
-		current = GameState.pause;
+	//	current = GameState.pause;
 	}
 	
 	// Update is called once per frame

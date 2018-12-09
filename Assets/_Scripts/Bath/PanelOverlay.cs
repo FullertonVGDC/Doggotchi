@@ -8,9 +8,9 @@ public class PanelOverlay : MonoBehaviour {
 
 	public void Ok(){
 		if(panelAnim != null && gameInfoAnim != null){
-			panelAnim.SetBool("Out", true);
-			gameInfoAnim.SetBool("Out", true);
-			StartCoroutine(GameStartCo());
+		//	panelAnim.SetBool("Out", true);
+		//	gameInfoAnim.SetBool("Out", true);
+		//	StartCoroutine(GameStartCo());
 		}
 	}
 
