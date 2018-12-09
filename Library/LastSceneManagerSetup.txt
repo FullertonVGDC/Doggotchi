@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/FeedMinigame.unity
+- path: Assets/_Scenes/FoodMinigame.unity
   isLoaded: 1
   isActive: 1
