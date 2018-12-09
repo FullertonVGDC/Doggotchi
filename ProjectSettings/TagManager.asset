@@ -17,6 +17,7 @@ TagManager:
   - regular sponge
   - shampoo
   - Music
+  - Sound
   layers:
   - Default
   - TransparentFX
