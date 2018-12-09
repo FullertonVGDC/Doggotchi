@@ -6,20 +6,18 @@ TagManager:
   tags:
   - Ground
   - Bone
-  tags:
-  - doge
-  - brush
-  - shampoo
-  - pooSpawn
+  - Dog
   - enemy
-  - bad sponge
-  - bathtub
-  - bone sponge
-  - dirt
-  - happy face
-  - regular sponge
-  - towel
+  - doge
   - water drop
+  - dirt
+  - bathtub
+  - bad sponge
+  - towel
+  - regular sponge
+  - shampoo
+  - Music
+  - Sound
   layers:
   - Default
   - TransparentFX
@@ -31,7 +29,6 @@ TagManager:
   - 
   - Enemy
   - Player
-  - 
   - 
   - 
   - 

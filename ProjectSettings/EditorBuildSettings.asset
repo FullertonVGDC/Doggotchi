@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/WalkMinigame.unity
     guid: 47a2e683e4f6b7c40801782a6b55d35d
+  - enabled: 1
+    path: Assets/_Scenes/credits.unity
+    guid: 24782171ce3fcdd4c90344e299ed6090
+  - enabled: 1
+    path: Assets/_Scenes/howtoplay.unity
+    guid: e413816052ed11d4489779595a791860
   m_configObjects: {}
