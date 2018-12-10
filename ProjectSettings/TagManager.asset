@@ -6,8 +6,23 @@ TagManager:
   tags:
   - Ground
   - Bone
-  - Dog
-  - enemy
+  - doge
+  - water drop
+  - dirt
+  - bathtub
+  - bad sponge
+  - towel
+  - regular sponge
+  - shampoo
+  - happy face
+  - bacon
+  - carrot
+  - dog_food
+  - grapes
+  - poop
+  - treats
+  - turkeyleg
+  - deadfish
   layers:
   - Default
   - TransparentFX
