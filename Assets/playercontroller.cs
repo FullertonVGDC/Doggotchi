@@ -18,6 +18,9 @@ public Text ScoreText;
 
 public GameObject end;
 
+public AudioClip[] sounds;
+	public AudioSource instrument;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
@@ -73,6 +76,13 @@ public GameObject end;
 	}
 
 	void gameover(){
+		playsound(0);
 end.SetActive (true);
 	}
+
+	void playsound(int index) {
+		instrument.clip = sounds[index];
+		instrument.Play();
+	}
+
 }
