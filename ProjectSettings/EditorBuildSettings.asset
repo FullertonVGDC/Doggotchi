@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/PlayMinigame.unity
     guid: 9fd3c7f835872cb4bba1d3f5bfc81837
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/FeedMinigame.unity
     guid: 192fe6136b5aa5f46a9bed10e7d6f07a
   - enabled: 1
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/howtoplay.unity
     guid: e413816052ed11d4489779595a791860
+  - enabled: 1
+    path: Assets/_Scenes/FoodMinigame.unity
+    guid: 60621df526f71d743bf33d02e2a1077a
+  - enabled: 1
+    path: Assets/_Scenes/walk.unity
+    guid: 366b60ec999fb0b40a1629b9f6bbdc44
   m_configObjects: {}

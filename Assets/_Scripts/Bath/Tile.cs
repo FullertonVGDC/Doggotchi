@@ -9,7 +9,6 @@ public class Tile : MonoBehaviour {
 	public GameObject otherTile;
 	private Board board;
 	private FindMatches findMatches;
-	//private EndGameManager endGameManager;
 
 	public bool isMatch = false;
 	public float swipeAngle_ = 0;
@@ -26,12 +25,11 @@ public class Tile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//endGameManager = FindObjectOfType<EndGameManager>();
 		board = FindObjectOfType<Board>();
 		findMatches = FindObjectOfType<FindMatches>();
 	}
 
-	/* Debugger */
+	/* Cheat Mode 
 	void OnMouseOver(){
 		if(Input.GetMouseButtonDown(1)){
 			isTypeBomb = true;
@@ -39,6 +37,7 @@ public class Tile : MonoBehaviour {
 			arrow.transform.parent = this.transform;
 		}
 	}
+	*/
 	
 	// Update is called once per frame
 	void Update () {
@@ -109,7 +108,6 @@ public class Tile : MonoBehaviour {
 			else{
 				board.DestroyMatches();
 			}	
-			//otherTile = null;
 		}
 	}
 
