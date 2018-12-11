@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/BathMinigame.unity
-=======
 - path: Assets/_Scenes/FoodMinigame.unity
->>>>>>> master
   isLoaded: 1
   isActive: 1
