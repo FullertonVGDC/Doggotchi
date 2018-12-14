@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/_Scenes/FoodMinigame.unity
-=======
-- path: Assets/_Scenes/howtoplay.unity
->>>>>>> Stashed changes
+- path: Assets/_Scenes/TarasTestScene.unity
   isLoaded: 1
   isActive: 1
