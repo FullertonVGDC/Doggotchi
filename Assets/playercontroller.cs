@@ -7,6 +7,7 @@ public class playercontroller : MonoBehaviour {
 
 Rigidbody2D rb;
 SpriteRenderer sr;
+Animator anim;
 
 bool grounded;
 public int speed, jump;
@@ -25,6 +26,7 @@ public AudioClip[] sounds;
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+		anim = GetComponent<Animator>();
         grounded = false;
         end.SetActive (false);
 	}
@@ -47,10 +49,15 @@ public AudioClip[] sounds;
 
 		float moveHorizontal = Input.GetAxisRaw("Horizontal");
 		rb.velocity = new Vector2(moveHorizontal * speed, rb.velocity.y);
+		anim.SetFloat("VelocityY", rb.velocity.y);
+		anim.SetFloat("PositionY", transform.position.y);
 
+		//Jump code
 		if (Input.GetKeyDown(KeyCode.Space) && grounded){
 			rb.velocity = new Vector2(0, jump);
 			grounded = false;
+			anim.SetBool("Grounded", false);
+			anim.SetTrigger("Jump Trigger");
 		}
 		
 
@@ -61,6 +68,7 @@ public AudioClip[] sounds;
 	void OnCollisionEnter2D(Collision2D collision){
 		if (collision.gameObject.tag == "Ground"){
 			grounded = true;
+			GetComponent<Animator>().SetBool("Grounded", true);
 		}
 		else if (collision.gameObject.tag == "Bone"){
 			score += 10;
